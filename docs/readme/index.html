@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+ <html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>undefined | FCC</title><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.5em georgia,serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:georgia,serif;font-weight:normal;word-wrap:break-word;}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.618rem;line-height:2.25rem;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.33471rem;line-height:2.25rem;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.21225rem;line-height:1.5rem;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.5rem;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.90825rem;line-height:1.5rem;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.86558rem;line-height:1.5rem;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}ul{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:0.85rem;line-height:1.42;background:hsla(0,0%,0%,0.04);border-radius:3px;overflow:auto;word-wrap:normal;padding:1.5rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:1rem;line-height:1.5rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}blockquote{margin-left:1.5rem;margin-right:1.5rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.5rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.5rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}li > ul{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}code{font-size:0.85rem;line-height:1.5rem;}kbd{font-size:0.85rem;line-height:1.5rem;}samp{font-size:0.85rem;line-height:1.5rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:tnum;padding-left:1rem;padding-right:1rem;padding-top:0.75rem;padding-bottom:calc(0.75rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}tt,code{background-color:hsla(0,0%,0%,0.04);border-radius:3px;font-family:Consolas,"Roboto Mono","Droid Sans Mono","Liberation Mono",Menlo,Courier,monospace;padding:0;padding-top:0.2em;padding-bottom:0.2em;}pre code{background:none;line-height:1.42;}code:before,code:after,tt:before,tt:after{letter-spacing:-0.2em;content:" ";}pre code:before,pre code:after,pre tt:before,pre tt:after{content:"";}</style><style>.demo1-ball{border-radius:99px;background-color:#fff;width:50px;height:50px;border:3px solid #fff;position:absolute;background-size:50px}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}@media only screen and (min-width:700px){.breakpoint-min-width-700{display:block}.breakpoint-max-width-700{display:none}}@media only screen and (max-width:700px){.breakpoint-min-width-700{display:none}.breakpoint-max-width-700{display:block}}</style><style>
+                  a {
+                    color: rgb(136,68,153);
+                  }
+                  .ball-0 {
+                    background-image: url(/docs/some-react-code/0.jpg);
+                  }
+                  .ball-1 {
+                    background-image: url(/docs/some-react-code/1.jpg);
+                  }
+                  .ball-2 {
+                    background-image: url(/docs/some-react-code/2.jpg);
+                  }
+                  .ball-3 {
+                    background-image: url(/docs/some-react-code/3.jpg);
+                  }
+                  .ball-4 {
+                    background-image: url(/docs/some-react-code/4.jpg);
+                  }
+                  .ball-5 {
+                    background-image: url(/docs/some-react-code/5.jpg);
+                  }
+                </style></head><body><div id="react-mount"><div data-reactroot="" data-reactid="1" data-react-checksum="1461202654"><div style="background:rgb(136,68,153);color:rgb(243,237,245);margin-bottom:2.25rem;" data-reactid="2"><div style="max-width:960px;margin-left:auto;margin-right:auto;padding-left:1.125rem;" data-reactid="3"><div style="padding:1.125rem 0;" data-reactid="4"><div style="float:left;margin-left:0%;margin-right:1.694915254237288%;width:32.20338983050847%;clear:none;height:24px;" data-reactid="5"><a style="text-decoration:none;color:rgb(243,237,245);font-size:1.59375rem;" href="/" data-reactid="6">FCC</a><span style="display:block;clear:both;" data-reactid="7"> </span></div><div style="float:right;margin-left:0%;margin-right:0%;width:66.10169491525423%;clear:none;" data-reactid="8"><a style="float:right;color:rgb(243,237,245);text-decoration:none;margin-left:0.75rem;" href="https://github.com/gatsbyjs/gatsby" data-reactid="9">Github</a><a style="background:rgb(136,68,153);color:rgb(243,237,245);float:right;text-decoration:none;padding-left:0.75rem;padding-right:0.75rem;padding-bottom:1.125rem;margin-bottom:-1.5rem;padding-top:1.5rem;margin-top:-1.5rem;" href="/examples/" data-reactid="10">Examples</a><a style="background:rgb(109,43,127);color:rgb(232,222,235);float:right;text-decoration:none;padding-left:0.75rem;padding-right:0.75rem;padding-bottom:1.125rem;margin-bottom:-1.5rem;padding-top:1.5rem;margin-top:-1.5rem;" href="/docs/" data-reactid="11">Documentation</a><span style="display:block;clear:both;" data-reactid="12"> </span></div><span style="display:block;clear:both;" data-reactid="13"> </span></div><span style="display:block;clear:both;" data-reactid="14"> </span></div></div><div style="max-width:960px;margin-left:auto;margin-right:auto;padding:1.5rem 1.125rem;padding-top:0;" data-reactid="15"><div data-reactid="16"><div class="breakpoint-min-width-700" data-reactid="17"><div style="overflow-y:auto;padding-right:calc(0.75rem - 1px);position:absolute;width:calc(12rem - 1px);border-right:1px solid lightgrey;" data-reactid="18"><ul style="list-style:none;margin-left:0;margin-top:0.75rem;" data-reactid="19"><li style="margin-bottom:0.75rem;" data-reactid="20"><a style="text-decoration:none;" href="/docs/" data-reactid="21">Introduction</a></li><li style="margin-bottom:0.75rem;" data-reactid="22"><a style="text-decoration:none;" href="/docs/getting-started/" data-reactid="23">Getting Started</a></li><li style="margin-bottom:0.75rem;" data-reactid="24"><a style="text-decoration:none;" href="/docs/how-to-run/" data-reactid="25">How to Run</a></li><li style="margin-bottom:0.75rem;" data-reactid="26"><a style="text-decoration:none;" href="/docs/some-react-code/" data-reactid="27"></a></li><li style="margin-bottom:0.75rem;" data-reactid="28"><a style="text-decoration:none;" href="/docs/the-next-step/" data-reactid="29">The Next Step</a></li><li style="margin-bottom:0.75rem;" data-reactid="30"><a style="text-decoration:none;" href="/docs/conclusion/" data-reactid="31">Conclusion</a></li><li style="margin-bottom:0.75rem;" data-reactid="32"><a style="text-decoration:none;" href="/docs/readme/" data-reactid="33"><strong data-reactid="34"></strong></a></li></ul></div><div style="padding:0 1.5rem;padding-left:calc(12rem + 1.5rem);" data-reactid="35"><div class="markdown" data-reactid="36"><h1 data-reactid="37"></h1><div data-reactid="38"><p><a href="https://travis-ci.org/gatsbyjs/gatsby"><img src="https://travis-ci.org/gatsbyjs/gatsby.svg?branch=master" alt="Travis CI Build Status"></a>
+<a href="https://www.npmjs.org/package/gatsby"><img src="https://img.shields.io/npm/v/gatsby.svg?style=flat-square" alt="npm package"></a>
+<a href="https://discord.gg/0ZcbPKXt5bVoxkfV"><img src="https://img.shields.io/badge/discord-gatsby%40reactiflux-738bd7.svg?style=flat-square" alt="gatsby channel on discord"></a>
+<a href="https://twitter.com/gatsbyjs"><img src="https://img.shields.io/twitter/follow/gatsbyjs.svg?style=social" alt="Twitter Follow"></a></p>
+<h1>Gatsby</h1>
+<p>Transform plain text into dynamic blogs and websites using the latest
+web technologies. A React.js static site generator.</p>
+<p>Supports Markdown, HTML, and React.js pages out of the box. Easy to add
+support for additional file types.</p>
+<p>Leverages React’s <a href="https://facebook.github.io/react/blog/2013/06/05/why-react.html">component model</a>
+and <a href="https://github.com/rackt/react-router/blob/master/docs/Introduction.md">React Router’s &quot;nested component hierarchy&quot;</a>
+to make templating incredibly powerful and intuitive.</p>
+<p>All templates, css, and content are <em>hot reloadable</em> — powered by
+<a href="https://github.com/webpack/webpack">webpack</a>.</p>
+<p>Build sites like it’s 1995. Files are translated into HTML pages at the
+same position within the file system. Add a markdown file at <code>/docs/index.md</code> and
+it’ll be converted to <code>/docs/index.html</code>.</p>
+<p><em><a href="https://github.com/gatsbyjs/gatsby/issues/419">We’ve started work on a 1.0 release of Gatsby!</a></em> Find the code in the <code>1.0</code> branch.</p>
+<p><img src="http://zippy.gfycat.com/UltimateWeeklyBarebirdbat.gif" alt="live-reloading example"></p>
+<h2>Goals</h2>
+<ul>
+<li>No-reload page transitions</li>
+<li>Hot reload editing. Tweak your pages, templates, and styles and see changes in
+real time.</li>
+<li>Make React.js component model and ecosystem available for building static sites</li>
+<li>Intuitive directory-based URLs. The URL of a page is derived from its
+spot on the file system.</li>
+<li>Support “Starters” — install starter sites directly from Github. Use open sourced
+starters or build your own.</li>
+</ul>
+<h2>Why use Gatsby instead of other Static Site Generators</h2>
+<ul>
+<li>No-refresh page transitions</li>
+<li>The awesome React.js component model</li>
+<li>Live editing on every part of your site. Dramatically speed development.</li>
+</ul>
+<h2>Sites built with Gatsby</h2>
+<ul>
+<li><a href="https://bricolage.io/?utm_source=github.com">bricolage.io</a> (<a href="https://github.com/KyleAMathews/blog">source</a>)</li>
+<li><a href="https://www.reindex.io">reindex.io</a></li>
+<li><a href="https://www.syncano.io">syncano.io</a> (<a href="https://github.com/Syncano/syncano.com">source</a>)</li>
+<li><a href="http://graphene-python.org/">graphene-python.org</a> (<a href="https://github.com/graphql-python/graphene/tree/master/docs">source</a>)</li>
+<li><a href="http://back-to-the-basics.io/">back-to-the-basics.io</a></li>
+<li><a href="http://ashk.io/">ashk.io</a> (<a href="https://github.com/wpioneer/blog">source</a>)</li>
+<li><a href="https://www.nordnet.se/brand/">nordnet.se/brand</a></li>
+<li><a href="https://likescoffee.com/">likescoffee.com</a> (<a href="https://github.com/pamo/pamo.github.io/tree/development">source</a>)</li>
+<li><a href="http://vii.campjs.com/">vii.campjs.com</a> (<a href="https://github.com/campjs/campjs-vii">source</a>)</li>
+<li><a href="http://michaeljdeeb.com">michaeljdeeb.com</a> (<a href="https://github.com/michaeljdeeb/michaeljdeeb-gatsby-blog">source</a>)</li>
+<li><a href="http://brittcrawford.com">brittcrawford.com</a> (<a href="https://github.com/britt/britt.github.com/tree/gatsby">source</a>)</li>
+<li><a href="https://tleunen.github.io/react-mdl/">React-MDL</a> (<a href="https://github.com/tleunen/react-mdl/tree/master/docs">source</a>)</li>
+<li><a href="https://snapgit.com">Snapgit</a> (<a href="https://github.com/glassfalcon/snapgit.com">source</a>)</li>
+<li><a href="http://iamdustan.com/">iamdustan.com</a> (<a href="https://github.com/iamdustan/iamdustan.github.io">source</a>)</li>
+<li><a href="http://iamdustan.com/react-hardware/">React Hardware</a> (<a href="https://github.com/iamdustan/react-hardware/tree/master/docs">source</a>)</li>
+<li><a href="https://www.peterp.me">peterp.me</a> (<a href="https://github.com/peterpme/peterpme.github.io">source</a>)</li>
+<li><a href="https://k-create.com">k-create.com</a> (<a href="https://github.com/kristofferh/kristoffer">source</a>)</li>
+<li><a href="https://kylegach.com">kylegach.com</a> (<a href="https://github.com/kylegach/kylegach_com">source</a>)</li>
+<li><a href="http://jazlal.li">jazlal.li</a> (<a href="https://github.com/jazlalli/jazlal.li">source</a>)</li>
+<li><a href="https://kyleamathews.github.io/react-headroom/">React Headroom</a> (<a href="https://github.com/KyleAMathews/react-headroom/tree/master/website">source</a>)</li>
+<li><a href="http://volligohne.com/">Völlig Ohne</a> (<a href="https://github.com/voellig-ohne/voellig-ohne-website">source</a>)</li>
+<li><a href="https://michaelcereda.com/">michaelcereda.com</a> (<a href="https://github.com/MichaelCereda/michaelcereda.com">source</a>)</li>
+<li><a href="https://open.fda.gov/">openFDA</a> (<a href="https://github.com/FDA/open.fda.gov">source</a>)</li>
+<li><a href="http://emilyaviva.com">emilyaviva.com</a> (<a href="https://github.com/emilyaviva/eakm-website-gatsby">source</a>)</li>
+<li><a href="http://www.dynamicext.com/">dynamicext.com</a></li>
+<li><a href="http://kyleamathews.github.io/react-gravatar/">React Gravatar</a> (<a href="https://github.com/KyleAMathews/react-gravatar/tree/master/www">source</a>)</li>
+<li><a href="http://johnm.io">johnm.io</a> (<a href="https://github.com/johnpmorris/johnpmorris.github.io/tree/react-rebuild">source</a>)</li>
+<li><a href="http://twnsnd.co/">twnsnd.co</a></li>
+<li><a href="http://www.beauhanxu.com/">Beau Han Xu</a></li>
+<li><a href="https://halfatheist.com/">HalfAtheist</a> (<a href="https://github.com/halfatheist/halfatheist.github.io">source</a>)</li>
+<li><a href="http://joshuahorwitz.net">joshuahorwitz.net</a></li>
+<li><a href="http://www.dosh.cash/">DOSH</a></li>
+<li><a href="https://www.outcomes.com/">Outcomes.com</a></li>
+<li><a href="https://www.codefellows.org">Codefellows.org</a></li>
+<li><a href="http://ollieglass.com/">ollieglass.com</a></li>
+<li><a href="https://waigojs.com/">waigojs.com</a> (<a href="https://github.com/waigo/waigo.github.io">source</a>)</li>
+<li><a href="http://stateofjs.com/">The State Of JavaScript</a></li>
+<li><a href="http://zbt.mit.edu">ZBT MIT Website</a> (<a href="https://github.com/Slava/zbt-website">source</a>)</li>
+<li><a href="http://ethereumclassic.org/">ethereumclassic.org</a> (<a href="https://github.com/ethereumclassic/ethereumclassic.github.io/tree/source">source</a>)</li>
+<li><a href="http://husammachlovi.com">Husam Machlovi, Portfolio &amp; Blog</a></li>
+<li><a href="http://numenta.com">numenta.com</a> (<a href="https://github.com/numenta/numenta-web/tree/master/numenta.com">source</a>)</li>
+<li><a href="https://labs.chie.do">chiedolabs.com</a></li>
+<li><a href="https://yuppi.es">Yuppies</a> (<a href="https://github.com/f0rr0/f0rr0.github.io">source</a>)</li>
+<li><a href="http://blog.yongyuan.us">Go7hic</a></li>
+<li><a href="https://devops.spuul.com/">Video streaming devops blog</a> (<a href="https://github.com/Spuul/devops-blog/">source</a>)</li>
+<li><a href="https://blog.rphl.io">blog.rphl.io</a></li>
+<li><a href="http://oliverbenns.com?utm_source=github.com">oliverbenns.com</a> (<a href="https://github.com/oliverbenns/oliverbenns.com">source</a>)</li>
+<li><a href="https://www.kapadiya.net/?utm_source=github.com">Kapadiya.net</a> (<a href="https://github.com/vikas5914/vikas5914.github.io">source</a>)</li>
+<li><a href="https://anvilabs.co/?utm_source=github.com">anvilabs.co</a> (<a href="https://github.com/anvilabs/anvilabs.co">source</a>)</li>
+<li><a href="https://cardiogr.am">Cardiogram</a></li>
+<li><a href="https://geographer.su">Geographer</a> (<a href="https://github.com/MenaraSolutions/geographer-docs">source</a>)</li>
+<li><a href="https://fuchsundwald.de">fuchs+wald</a> (<a href="https://github.com/voellig-ohne/cf-website">source</a>)</li>
+<li><a href="https://angulartoreact.com">AngularToReact.com</a></li>
+<li><a href="http://www.damianmullins.com">damianmullins.com</a> (<a href="https://github.com/DamianMullins/damianmullins.github.io">source</a>)</li>
+<li><a href="https://www.spencerdixon.com/">Spencer Dixon’s Blog</a> (<a href="https://github.com/SpencerCDixon/blog">source</a>)</li>
+<li><a href="http://www.landlordaccountz.com">LandlordAccountz.com</a></li>
+<li><a href="https://timobecker.com">Timo Becker</a> (<a href="https://github.com/voellig-ohne/timobecker">source</a>)</li>
+<li><a href="http://sachagreif.com/">Sacha Greif</a> (<a href="https://github.com/SachaG/sg2017">source</a>)</li>
+<li><a href="https://crypto.christmas/">Crypto Christmas</a> (<a href="https://github.com/rileyjshaw/crypto.christmas">source</a>)</li>
+<li><a href="https://www.perspexilabs.com/">Perspexi Labs</a></li>
+<li><a href="https://github.com/gatsbyjs/gatsby/blob/master/README.md">Edit this file to add yours!</a></li>
+</ul>
+<p><em>Note, for the sites that have made their source available, you can
+install them locally by running <code>gatsby new SITE_NAME SOURCE_URL</code>.</em></p>
+<h2>Sponsors</h2>
+<ul>
+<li><a href="https://relaterocket.co">RelateRocket</a></li>
+<li><a href="http://thinkmill.com.au/">Thinkmill</a></li>
+<li><a href="https://loanpal.com/">Loanpal</a></li>
+</ul>
+<h2>Videos and blogs</h2>
+<ul>
+<li><a href="https://twitter.com/scottnonnenberg">Scott Nonnenberg</a> presents on Gatsby to the Seattle React.js Meetup <a href="https://blog.scottnonnenberg.com/static-site-generation-with-gatsby-js/">https://blog.scottnonnenberg.com/static-site-generation-with-gatsby-js/</a></li>
+<li><a href="https://twitter.com/kylemathews">Kyle Mathews</a> gave a lightning talk @ the 2016 React.js Conference on Gatsby <a href="https://www.youtube.com/watch?v=RFkNRKL6ZoE">https://www.youtube.com/watch?v=RFkNRKL6ZoE</a></li>
+<li><a href="https://twitter.com/kylemathews">Kyle Mathews</a> spoke on Gatsby to the San Francisco Static Web Tech meetup <a href="http://www.staticwebtech.com/presentations/developing-with-react-gatsbyjs/">http://www.staticwebtech.com/presentations/developing-with-react-gatsbyjs/</a></li>
+<li><a href="https://snipcart.com/blog/snipcart-reactjs-static-ecommerce-gatsby">ReactJS E-Commerce With No Backend Using Snipcart &amp; Gatsby</a></li>
+<li><a href="https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify">A step-by-step guide: Gatsby on Netlify</a></li>
+<li><a href="https://www.aerobatic.com/blog/gatsbyjs">Hosting GatsbyJS – A React Static Site Generator</a></li>
+<li><a href="https://medium.com/@michaelcereda/creating-an-isomorphic-universal-website-with-react-part-1-a905350acba8#.akoo25l6j">Michael Cereda’s multi-part series of blog posts on building his site with Gatsby</a></li>
+<li><a href="https://www.youtube.com/watch?v=f0O1nCgqA3E&amp;feature=youtu.be&amp;a">Talk on GatsbyJS @ ViennaJS</a></li>
+</ul>
+<h2>I’m already building a server-rendered React.js site, is Gatsby a good fit?</h2>
+<p>If your site falls closer to the site end of the app&lt;----&gt;site spectrum
+then yes.</p>
+<p>Gatsby is an excellent fit for blogs, marketing sites, docs sites, etc. Proper web
+apps should probably remain as normal web apps (though I’d love to be
+proved wrong!).</p>
+<h2>Warning!</h2>
+<p>Gatsby is not yet stable. APIs will break. Functionality is missing. It’s
+usable but if you plan on building with it, expect a rocky road for some time.</p>
+<p>Contributions welcome!</p>
+<h2>Getting started</h2>
+<h3>Install</h3>
+<p><code>npm install -g gatsby</code></p>
+<h3>Usage</h3>
+<ol>
+<li>Create new Gatsby site <code>gatsby new my-test-gatsby-site</code> This creates the
+directory for your Gatsby project and adds the minimal files
+needed.</li>
+<li><code>cd my-test-gatsby-site</code></li>
+<li><code>gatsby develop</code> — Gatsby will start a hot-reloading development
+server accessible at <a href="http://localhost:8000">localhost:8000</a></li>
+<li>See the tutorial below for more.</li>
+</ol>
+<h3>Gatsby Starters</h3>
+<p>The Gatsby CLI tool lets you install “starters”. These are
+partially built sites preconfigured to help you get moving faster on
+creating a certain type of site.</p>
+<p>When creating a new site, you can optionally specify a starter to
+base your new site on e.g. <code>gatsby new [SITE_DIRECTORY] [URL_OF_STARTER]</code></p>
+<p>For example, to quickly create a blog using Gatsby, you could install
+the Gatsby Starter Blog by running:</p>
+<p><code>gatsby new blog https://github.com/gatsbyjs/gatsby-starter-blog</code></p>
+<p>This downloads the files and initializes the site by running <code>npm install</code></p>
+<p>If you don’t specify a custom starter, your site will be created
+from the <a href="https://github.com/gatsbyjs/gatsby-starter-default">default
+starter</a>.</p>
+<p>There are several starters that have been created. Create a PR to
+include yours!</p>
+<ul>
+<li><a href="https://github.com/gatsbyjs/gatsby-starter-default">Kitchen sink default starter</a> (<a href="http://gatsbyjs.github.io/gatsby-starter-default/">Demo</a>)</li>
+<li><a href="https://github.com/gatsbyjs/gatsby-starter-blog">Simple blog</a> (<a href="http://gatsbyjs.github.io/gatsby-starter-blog/">Demo</a>)</li>
+<li><a href="https://github.com/gatsbyjs/gatsby-starter-documentation">Simple documentation site</a> (<a href="http://gatsbyjs.github.io/gatsby-starter-documentation/">Demo</a>)</li>
+<li><a href="https://github.com/wpioneer/gatsby-starter-lumen">Lumen</a> (<a href="http://wpioneer.github.io/gatsby-starter-lumen/">Demo</a>)</li>
+<li><a href="https://github.com/konsumer/gatsby-starter-drunkenblog">DrunkenBlog</a> (<a href="http://konsumer.js.org/gatsby-starter-drunkenblog/">Demo</a>)</li>
+<li><a href="https://github.com/brianstone/gatsby-starter-clean">Clean start</a> (<a href="http://gatsby-starter-clean.netlify.com/">Demo</a>)</li>
+<li><a href="https://github.com/chiedo/gatsby-amp-starter-blog">Project AMP blog</a></li>
+<li><a href="https://github.com/jaxx2104/gatsby-starter-bootstrap">Gatstrap</a> (<a href="https://jaxx2104.github.io/gatsby-starter-bootstrap/">Demo</a>)</li>
+</ul>
+<h3>Tutorial: Building a documentation site from the Gatsby Documentation Starter</h3>
+<ol>
+<li>Install gatsby <code>npm install -g gatsby</code></li>
+<li>Install documentation site starter <code>gatsby new docs-site gh:gatsbyjs/gatsby-starter-documentation</code></li>
+<li>type <code>cd docs-site</code></li>
+<li>type <code>gatsby develop</code></li>
+<li>Open site in browser at <a href="http://localhost:8000">localhost:8000</a>. Verify clicking on links works.</li>
+<li>Try editing the site’s config file <code>config.toml</code>.
+Change the <code>siteTitle</code> key. The site’s title should change shortly
+after saving.</li>
+<li>Next try editing a doc page. Open
+<code>/pages/docs/getting-started/index.md</code> and edit it. Again any saved
+changes should load without refreshing in the browser.</li>
+<li>Add a new markdown page to the documentation. Copy the <code>getting-started</code>
+directory to <code>some-additional-steps</code>. Then edit the markdown file
+within the new directory. If you’re familiar with other static site
+generation software, you’ll be familiar with the “frontmatter” at the
+top of the file. Edit the title there + change the order to “5”. Save
+this. Ideally this new file would be hot reloaded like other changes
+but I haven’t figured out how to make this happen yet (<a href="https://github.com/webpack/webpack/issues/1162">help
+appreciated here</a>).
+So to see your new page, restart <code>gatsby develop</code> and then refresh your
+browser.</li>
+<li>Build your site <code>gatsby build</code>. The site is built to the <code>/public</code>
+directory. Test that the build worked by running <code>gatsby serve-build</code>
+which serves the contents of the <code>/public</code> directory.</li>
+</ol>
+<h2>How Gatsby works</h2>
+<h3>How files become pages</h3>
+<p>The process is file --&gt; Webpack loader --&gt; React.js wrapper component
+–&gt; static HTML page.</p>
+<p>Gatsby leverages <a href="http://webpack.github.io/">Webpack</a> extensively.
+Webpack is a sophisticated module bundler that can turn any sort of
+file into a commonjs module. Webpack uses “Loaders” to convert a file
+into a module. These loaded modules are then wrapped inside a React.js
+component that’s specific to a given file type. Gatsby then generates a
+static HTML page from this component.</p>
+<p>Gatsby ships with default loaders and wrappers for HTML, Markdown, and
+JSX/CJSX but for most projects you’ll want to write your own loaders and
+wrappers (very easy to do).</p>
+<p>As an example of how this process works, let’s walk quickly through
+converting a markdown file into an HTML page.</p>
+<p>The <a href="https://github.com/gatsbyjs/gatsby/blob/master/lib/loaders/markdown-loader/index.js">default Gatsby markdown
+loader</a>
+parses the markdown into HTML and uses <a href="https://highlightjs.org/">Highlight.js</a>
+to syntax highlight code blocks.</p>
+<p>Our markdown file.</p>
+<pre><code class="language-markdown">---
+<span class="hljs-section">title: This is a title
+---</span>
+
+<span class="hljs-section"># Hi friends.</span>
+This is a markdown file.
+</code></pre>
+<p>When loaded and required, the resulting javascript object looks like the following:</p>
+<pre><code class="language-javascript">{
+  <span class="hljs-attr">file</span>: {
+    <span class="hljs-comment">// Information about file on disk e.g. extension, directory path, etc.</span>
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">title</span>: <span class="hljs-string">"This is a title"</span>,
+    <span class="hljs-attr">body</span>: <span class="hljs-string">"&lt;h1&gt;Hi friends.&lt;/h1&gt;&lt;p&gt;This is a markdown file&lt;/p&gt;"</span>
+  }
+}
+</code></pre>
+<p>Now Gatsby wraps the markdown file in this very simple React.js component.</p>
+<pre><code class="language-javascript"><span class="hljs-built_in">module</span>.exports = React.createClass({
+  <span class="hljs-attr">displayName</span>: <span class="hljs-string">"MarkdownWrapper"</span>,
+
+  <span class="hljs-attr">render</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> post = <span class="hljs-keyword">this</span>.props.route.page.data
+
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"markdown"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>{post.title}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">dangerouslySetInnerHTML</span>=<span class="hljs-string">{{__html:</span> <span class="hljs-attr">post.body</span>}}/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  }
+})
+</span></code></pre>
+<h4>frontmatter and metadata</h4>
+<p>Gatsby uses frontmatter and html-frontmatter to pull metadata out of files. This data is typically used in links leading to each page. The most relevant example is a list of blog posts in which you display the title, description, tags, etc. in the form of <code>{post.title}</code> in the React.js component.</p>
+<p>As seen in our previous markdown file, the title is part of the frontmatter</p>
+<pre><code><span class="hljs-meta">---</span>
+<span class="hljs-attr">title:</span> This is a title
+<span class="hljs-meta">---</span>
+
+<span class="hljs-comment"># Hi friends.</span>
+This is a markdown file.
+</code></pre>
+<p>An html example as follows.</p>
+<pre><code><span class="hljs-comment">&lt;!--
+title: This is a title
+--&gt;</span>
+ 
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>
+<p>In a .js|.jsx file, export a data object to set your metadata variables, like so:</p>
+<pre><code><span class="hljs-keyword">import</span> React from 'react'
+
+<span class="hljs-title">exports</span>.<span class="hljs-class"><span class="hljs-keyword">data</span> = {
+  <span class="hljs-title">title</span>: '<span class="hljs-type">This</span> <span class="hljs-title">is</span> <span class="hljs-title">a</span> <span class="hljs-title">title'</span>,
+}</span>
+
+<span class="hljs-title">export</span> <span class="hljs-keyword">default</span> <span class="hljs-type">MyComponent</span> ...
+</code></pre>
+<h3>Structure of a Gatsby site</h3>
+<ul>
+<li><code>config.toml</code> - Core application configuration is stored here. Available via a <code>require</code>
+or <code>import</code> of ‘config’. Values:
+<ul>
+<li><code>noProductionJavascript</code> - set to a truthy value to prevent generation of bundle.js
+(containing your client-side Single Page App) during a <code>gatbsy build</code>. You’ll need
+to update your top-level <code>html.js</code> file so that it doesn’t pull in <code>bundle.js</code> in
+production, but you’ll want to keep it for <code>gatsby develop</code> mode.</li>
+</ul>
+</li>
+<li><code>/pages</code> - All pages go here. Everything is turned into a page except
+files which start with an underscore:
+<ul>
+<li><code>_template</code> files under <code>/pages</code> are treated as parent templates for other pages in
+the same directory tree.</li>
+<li>(optional) <code>pages/404.js</code> or <code>pages/404.html</code> - automatically picked up as your ‘not
+found’ page. If you <code>&lt;Link&gt;</code> to an unknown URL, this page will be shown. Note: in
+production, you’ll need to <a href="https://github.com/gatsbyjs/gatsby/pull/121#issuecomment-194715068">set up your server host to show this page when it can’t find
+the requested file</a>.</li>
+</ul>
+</li>
+<li>(optional) <code>gatsby-browser.js</code> - a way to hook into key application events. Export
+<code>onRouteUpdate</code> of type <code>function()</code> to be notified whenever React-Router
+navigates.</li>
+<li>(optional) <code>gatsby-node.js</code> - a way to hook into events during build
+and development.</li>
+</ul>
+<h3>How to use your own webpack loaders</h3>
+<p>Gatsby uses <a href="https://github.com/lewie9021/webpack-configurator">webpack-configurator</a>
+to make changing the webpack loaders easy. The default set of loaders is organized by <a href="lib/utils/webpack.config.js#L125">key</a>.</p>
+<p>To modify the Webpack configuration, create a <code>gatsby-node.js</code> in the root of your project
+and export there a <code>modifyWebpackConfig</code> function.</p>
+<pre><code class="language-javascript">exports.modifyWebpackConfig = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">config, stage</span>) </span>{
+  <span class="hljs-comment">// edit loaders here</span>
+  <span class="hljs-keyword">return</span> config
+}
+</code></pre>
+<p>Gatsby calls this function with the webpack-configurator object and
+&quot;stage&quot; string when it creates a Webpack config. It first
+loads the defaults and then allows you to modify it.</p>
+<p>The <code>stage</code> can be:</p>
+<ol>
+<li>develop: for <code>gatsby develop</code> command, hot reload and CSS injection into page</li>
+<li>develop-html: same as develop without react-hmre in the babel config for html renderer</li>
+<li>build-css: build styles.css file</li>
+<li>build-html: build all HTML files</li>
+<li>build-javascript: Build bundle.js for Single Page App in production</li>
+</ol>
+<p>Consider the following example which removes the default css loader
+and replaces it with a loader that uses css-modules.</p>
+<pre><code class="language-javascript">exports.modifyWebpackConfig = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">config, stage</span>) </span>{
+  config.removeLoader(<span class="hljs-string">'css'</span>)
+  config.loader(<span class="hljs-string">'css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cfg</span>) </span>{
+    cfg.test = <span class="hljs-regexp">/\.css$/</span>
+    cfg.loader = <span class="hljs-string">'style!css?modules'</span>
+    <span class="hljs-keyword">return</span> cfg
+  })
+  <span class="hljs-keyword">return</span> config
+}
+</code></pre>
+<p>Each loader (<code>cfg</code> in the above example) can be a valid
+<a href="https://webpack.github.io/docs/configuration.html#module-loaders">webpack loader</a>
+and there are a host of
+<a href="https://webpack.github.io/docs/list-of-loaders.html">preexisting loaders</a>
+which you can use to enhance Gatsby.</p>
+<p>It is also possible to <a href="https://webpack.github.io/docs/how-to-write-a-loader.html">write your own loaders</a>.</p>
+<p>Gatsby includes <a href="https://github.com/gatsbyjs/gatsby/tree/master/lib/loaders">some default loaders</a> that you can also override.</p>
+<p>To write your own loader or override a Gatsby loader, make a <code>loaders</code> directory at the root of your site that contains directories for custom loaders.</p>
+<p>e.g. <code>loaders/markdown-loader/index.js</code> <a href="https://github.com/gatsbyjs/gatsby/blob/master/lib/utils/webpack.config.js#L325">will take precedence</a>
+over the markdown-loader that Gatsby includes.</p>
+<p><a href="https://github.com/gatsbyjs/gatsby-starter-default/blob/master/loaders/markdown-loader/index.js">See an example of a custom loader in the default starter</a>.</p>
+<h3>How to use your own webpack plugins</h3>
+<p>Similar to the loaders, plugins are handled via
+<a href="https://github.com/lewie9021/webpack-configurator">webpack-configurator</a>
+and <code>gatsby-node.js</code>.</p>
+<p><em>Note: the following example is now redundant since
+ExtractTextWebpackPlugin is now setup by default but you can still use
+it as an example of how to modify the Webpack plugins.</em></p>
+<p>If we wanted to extract all of the css in our project into a since
+<code>styles.css</code> file for production, we could add the
+<code>ExtractTextWebpackPlugin</code>. To do this, we need to modify the loader
+and add the plugin when generating the static HTML for our site.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> ExtractTextPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">"extract-text-webpack-plugin"</span>)
+
+exports.modifyWebpackConfig = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">config, stage</span>) </span>{
+  <span class="hljs-keyword">if</span>(stage === <span class="hljs-string">'build-html'</span>) {
+    config.removeLoader(<span class="hljs-string">'css'</span>)
+    config.loader(<span class="hljs-string">'css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cfg</span>) </span>{
+      cfg.test = <span class="hljs-regexp">/\.css$/</span>
+      cfg.loader = ExtractTextPlugin.extract(<span class="hljs-string">'css?minimize'</span>)
+      <span class="hljs-keyword">return</span> cfg
+    })
+    config.plugin(<span class="hljs-string">'extract-css'</span>,
+                  ExtractTextPlugin,
+                  [<span class="hljs-string">"styles.css"</span>, { <span class="hljs-attr">allChunks</span>: <span class="hljs-literal">true</span> }])
+  }
+  <span class="hljs-keyword">return</span> config
+}
+</code></pre>
+<p>Each plugin (<code>extract-css</code> in the above example) can be a valid
+<a href="https://webpack.github.io/docs/using-plugins.html">webpack plugin</a>
+and there are a host of
+<a href="https://webpack.github.io/docs/list-of-plugins.html">preexisting plugins</a>
+which you can use to enhance Gatsby.</p>
+<p>It is also possible to
+<a href="https://webpack.github.io/docs/how-to-write-a-plugin.html">write your own plugins</a>.</p>
+<h3>Perform additional post build step</h3>
+<p>Gatsby also uses <code>gatsby-node.js</code> to pass control of the final build step over
+to the user when running <code>gatsby build</code>. The post build function takes two arguments, the pages and the callback for completing the build:</p>
+<pre><code class="language-javascript">exports.postBuild = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">pages, callback</span>) </span>{
+  <span class="hljs-comment">// perform actions on pages here</span>
+
+  callback()
+}
+</code></pre>
+<h3>How to write your own wrappers</h3>
+<ul>
+<li>Coming…</li>
+</ul>
+<h2>FAQ</h2>
+<h3>Pre-Requisites</h3>
+<p><a href="https://www.python.org/">Python v2</a> is required to install Gatsby. Please ensure python is in your path before running <code>npm install -g gatsby</code>.</p>
+<h3>I added a new page and it’s not showing up!</h3>
+<p><a href="https://github.com/webpack/webpack/issues/1162">Webpack doesn’t currently support hot-reloading new files added to a context</a>. When you add a new file, restart the <code>gatsby develop</code> process and your new page will show up.</p>
+<p>Make sure you also including the <strong>trailing slash</strong> in your URLs:</p>
+<ul>
+<li>Bad: <code>http://localhost:8000/foo</code></li>
+<li>Good: <code>http://localhost:8000/foo/</code></li>
+</ul>
+<h3>Inline CSS</h3>
+<p>A neat performance feature supported by Gatsby is inlining your CSS in
+the <code>&lt;head&gt;</code> of each HTML page. Not referencing external style sheets
+significantly speeds up the initial render of your site by avoiding
+another round trip to your server as the initial render of a page is
+blocked by external CSS files. This is a best practice suggested by
+many groups including <a href="https://www.ampproject.org/docs/guides/responsive/style_pages.html">Google’s AMP
+project</a>.</p>
+<p>Each of <a href="https://github.com/gatsbyjs/gatsby-starter-default/blob/master/html.js">the official starters supports this pattern</a>.
+The code to make it happen is in brief:</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// In your html.js</span>
+<span class="hljs-keyword">let</span> css
+<span class="hljs-comment">// In development, css is injected by Javascript by the Webpack style-loader.</span>
+<span class="hljs-keyword">if</span> (process.env.NODE_ENV === <span class="hljs-string">'production'</span>) {
+  css = &lt;style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} /&gt;
+}
+
+// Then in your &lt;head&gt;
+{css}
+</code></pre>
+<h3>CSS modules</h3>
+<p><a href="https://github.com/css-modules/css-modules">CSS modules</a> are supported by default for all files with <code>.module.(css|less|scss|sass)</code> extension.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// Uses CSS Modules</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./my-component.module.css'</span>
+
+<span class="hljs-comment">// Doesn't use CSS Modules</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./main.css'</span>
+</code></pre>
+<h3>Configuring Babel</h3>
+<p>You can modify Babel’s behavior as normal by either providing a <code>.babelrc</code> in
+your site’s root directory or by adding a “babel” section in your site’s
+<code>package.json</code>. You can find out more about how to configure babel
+<a href="https://babeljs.io/docs/usage/babelrc/">here</a>.</p>
+<p>Gatsby by default will use your Babel configuration over the default if it can
+find it. Gatsby will automatically add react-hmre to your Babel config during
+development.</p>
+<p>Note that if you want to use babel-plugin that is not provided by Gatsby, you
+will have to also add it to your package.json. You can use any babel-plugin
+that Gatsby packs as a dependency without having to add it to your own
+package.json:</p>
+<ul>
+<li>babel-plugin-add-module-exports</li>
+<li>babel-plugin-transform-object-assign</li>
+<li>babel-preset-es2015</li>
+<li>babel-preset-react</li>
+<li>babel-preset-stage-0</li>
+</ul>
+<p>If you need to change the loader to be something completely custom. You will
+have to define your own webpack loader by following the steps <a href="https://github.com/gatsbyjs/gatsby#how-to-use-your-own-webpack-loaders">described
+above</a>.</p>
+<h3>Extending Markdown Syntax with Plugins</h3>
+<p>Gatsby uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> to parse
+markdown files into HTML. By default Gatsy ships with only basic markdown
+support. You can extend the syntax (e.g. for mathematical equations) by installing
+<a href="https://www.npmjs.org/browse/keyword/markdown-it-plugin">markdown-it plugins</a>.</p>
+<p>If you want to do this you will need to use a custom markdown loader. You can
+copy the one provided in the default starter <a href="https://github.com/gatsbyjs/gatsby-starter-default/blob/master/loaders/markdown-loader/index.js">here</a>.
+Add the relevant packages to your dependencies, including the markdown-it
+plugins that you want to use and enable them with <code>md.use(require('markdown-it-plugin-name'))</code>
+within the markdown loader file.</p>
+<h3>Deploying to Github Pages (and other hosts where your site’s links need prefixes)</h3>
+<p>Gatsby supports automatically prefixing links with its <code>prefixLink</code> helper function.</p>
+<p>First set the prefix in your config file e.g. <code>linkPrefix = '/your-project'</code></p>
+<p>Then simply import the function and run all links in your site
+thorough it e.g.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { prefixLink } <span class="hljs-keyword">from</span> <span class="hljs-string">'gatsby-helpers'</span>
+
+prefixLink(<span class="hljs-string">'/'</span>)
+<span class="hljs-comment">// During development this will return "/"</span>
+<span class="hljs-comment">// When deployed to example.github.io/your-project/ this will return "/your-project/"</span>
+</code></pre>
+<p>Then finally, when building your site, run <code>gatsby build --prefix-links</code></p>
+<p>The built site is now in <code>/public</code>. These files need copied to your
+<code>gh-pages</code> branch and committed and pushed. You can do this manually or
+use the handy <a href="https://www.npmjs.com/package/gh-pages"><code>gh-pages</code></a> CLI tool.</p>
+<p>Both the sample sites are deployed to github pages and use link
+prefixing. Read their source for more help:
+<a href="https://github.com/gatsbyjs/gatsby-starter-documentation">documentation</a>/<a href="https://github.com/gatsbyjs/gatsby-starter-blog">blog</a>.</p>
+<h3>I have an existing site in (Wordpress|Drupal|Blogger|Tumblr|*), how do I convert it to Gatsby?</h3>
+<p>Jekyll has a <a href="http://import.jekyllrb.com/">comprehensive import tool</a> for these and many other website tools.
+Once your pages are converted to markdown, change the file extensions to
+<code>.md</code> from the <code>.markdown</code> the tool outputs and then use them in your
+site.</p>
+</div></div></div></div><div class="breakpoint-max-width-700" data-reactid="39"><strong data-reactid="40">Topics:</strong><!-- react-text: 41 --> <!-- /react-text --><select data-reactid="42"><option value="/docs/" data-reactid="43">Introduction</option><option value="/docs/getting-started/" data-reactid="44">Getting Started</option><option value="/docs/how-to-run/" data-reactid="45">How to Run</option><option value="/docs/some-react-code/" data-reactid="46"></option><option value="/docs/the-next-step/" data-reactid="47">The Next Step</option><option value="/docs/conclusion/" data-reactid="48">Conclusion</option><option selected="" value="/docs/readme/" data-reactid="49"></option></select><br data-reactid="50"/><br data-reactid="51"/><div class="markdown" data-reactid="52"><h1 data-reactid="53"></h1><div data-reactid="54"><p><a href="https://travis-ci.org/gatsbyjs/gatsby"><img src="https://travis-ci.org/gatsbyjs/gatsby.svg?branch=master" alt="Travis CI Build Status"></a>
+<a href="https://www.npmjs.org/package/gatsby"><img src="https://img.shields.io/npm/v/gatsby.svg?style=flat-square" alt="npm package"></a>
+<a href="https://discord.gg/0ZcbPKXt5bVoxkfV"><img src="https://img.shields.io/badge/discord-gatsby%40reactiflux-738bd7.svg?style=flat-square" alt="gatsby channel on discord"></a>
+<a href="https://twitter.com/gatsbyjs"><img src="https://img.shields.io/twitter/follow/gatsbyjs.svg?style=social" alt="Twitter Follow"></a></p>
+<h1>Gatsby</h1>
+<p>Transform plain text into dynamic blogs and websites using the latest
+web technologies. A React.js static site generator.</p>
+<p>Supports Markdown, HTML, and React.js pages out of the box. Easy to add
+support for additional file types.</p>
+<p>Leverages React’s <a href="https://facebook.github.io/react/blog/2013/06/05/why-react.html">component model</a>
+and <a href="https://github.com/rackt/react-router/blob/master/docs/Introduction.md">React Router’s &quot;nested component hierarchy&quot;</a>
+to make templating incredibly powerful and intuitive.</p>
+<p>All templates, css, and content are <em>hot reloadable</em> — powered by
+<a href="https://github.com/webpack/webpack">webpack</a>.</p>
+<p>Build sites like it’s 1995. Files are translated into HTML pages at the
+same position within the file system. Add a markdown file at <code>/docs/index.md</code> and
+it’ll be converted to <code>/docs/index.html</code>.</p>
+<p><em><a href="https://github.com/gatsbyjs/gatsby/issues/419">We’ve started work on a 1.0 release of Gatsby!</a></em> Find the code in the <code>1.0</code> branch.</p>
+<p><img src="http://zippy.gfycat.com/UltimateWeeklyBarebirdbat.gif" alt="live-reloading example"></p>
+<h2>Goals</h2>
+<ul>
+<li>No-reload page transitions</li>
+<li>Hot reload editing. Tweak your pages, templates, and styles and see changes in
+real time.</li>
+<li>Make React.js component model and ecosystem available for building static sites</li>
+<li>Intuitive directory-based URLs. The URL of a page is derived from its
+spot on the file system.</li>
+<li>Support “Starters” — install starter sites directly from Github. Use open sourced
+starters or build your own.</li>
+</ul>
+<h2>Why use Gatsby instead of other Static Site Generators</h2>
+<ul>
+<li>No-refresh page transitions</li>
+<li>The awesome React.js component model</li>
+<li>Live editing on every part of your site. Dramatically speed development.</li>
+</ul>
+<h2>Sites built with Gatsby</h2>
+<ul>
+<li><a href="https://bricolage.io/?utm_source=github.com">bricolage.io</a> (<a href="https://github.com/KyleAMathews/blog">source</a>)</li>
+<li><a href="https://www.reindex.io">reindex.io</a></li>
+<li><a href="https://www.syncano.io">syncano.io</a> (<a href="https://github.com/Syncano/syncano.com">source</a>)</li>
+<li><a href="http://graphene-python.org/">graphene-python.org</a> (<a href="https://github.com/graphql-python/graphene/tree/master/docs">source</a>)</li>
+<li><a href="http://back-to-the-basics.io/">back-to-the-basics.io</a></li>
+<li><a href="http://ashk.io/">ashk.io</a> (<a href="https://github.com/wpioneer/blog">source</a>)</li>
+<li><a href="https://www.nordnet.se/brand/">nordnet.se/brand</a></li>
+<li><a href="https://likescoffee.com/">likescoffee.com</a> (<a href="https://github.com/pamo/pamo.github.io/tree/development">source</a>)</li>
+<li><a href="http://vii.campjs.com/">vii.campjs.com</a> (<a href="https://github.com/campjs/campjs-vii">source</a>)</li>
+<li><a href="http://michaeljdeeb.com">michaeljdeeb.com</a> (<a href="https://github.com/michaeljdeeb/michaeljdeeb-gatsby-blog">source</a>)</li>
+<li><a href="http://brittcrawford.com">brittcrawford.com</a> (<a href="https://github.com/britt/britt.github.com/tree/gatsby">source</a>)</li>
+<li><a href="https://tleunen.github.io/react-mdl/">React-MDL</a> (<a href="https://github.com/tleunen/react-mdl/tree/master/docs">source</a>)</li>
+<li><a href="https://snapgit.com">Snapgit</a> (<a href="https://github.com/glassfalcon/snapgit.com">source</a>)</li>
+<li><a href="http://iamdustan.com/">iamdustan.com</a> (<a href="https://github.com/iamdustan/iamdustan.github.io">source</a>)</li>
+<li><a href="http://iamdustan.com/react-hardware/">React Hardware</a> (<a href="https://github.com/iamdustan/react-hardware/tree/master/docs">source</a>)</li>
+<li><a href="https://www.peterp.me">peterp.me</a> (<a href="https://github.com/peterpme/peterpme.github.io">source</a>)</li>
+<li><a href="https://k-create.com">k-create.com</a> (<a href="https://github.com/kristofferh/kristoffer">source</a>)</li>
+<li><a href="https://kylegach.com">kylegach.com</a> (<a href="https://github.com/kylegach/kylegach_com">source</a>)</li>
+<li><a href="http://jazlal.li">jazlal.li</a> (<a href="https://github.com/jazlalli/jazlal.li">source</a>)</li>
+<li><a href="https://kyleamathews.github.io/react-headroom/">React Headroom</a> (<a href="https://github.com/KyleAMathews/react-headroom/tree/master/website">source</a>)</li>
+<li><a href="http://volligohne.com/">Völlig Ohne</a> (<a href="https://github.com/voellig-ohne/voellig-ohne-website">source</a>)</li>
+<li><a href="https://michaelcereda.com/">michaelcereda.com</a> (<a href="https://github.com/MichaelCereda/michaelcereda.com">source</a>)</li>
+<li><a href="https://open.fda.gov/">openFDA</a> (<a href="https://github.com/FDA/open.fda.gov">source</a>)</li>
+<li><a href="http://emilyaviva.com">emilyaviva.com</a> (<a href="https://github.com/emilyaviva/eakm-website-gatsby">source</a>)</li>
+<li><a href="http://www.dynamicext.com/">dynamicext.com</a></li>
+<li><a href="http://kyleamathews.github.io/react-gravatar/">React Gravatar</a> (<a href="https://github.com/KyleAMathews/react-gravatar/tree/master/www">source</a>)</li>
+<li><a href="http://johnm.io">johnm.io</a> (<a href="https://github.com/johnpmorris/johnpmorris.github.io/tree/react-rebuild">source</a>)</li>
+<li><a href="http://twnsnd.co/">twnsnd.co</a></li>
+<li><a href="http://www.beauhanxu.com/">Beau Han Xu</a></li>
+<li><a href="https://halfatheist.com/">HalfAtheist</a> (<a href="https://github.com/halfatheist/halfatheist.github.io">source</a>)</li>
+<li><a href="http://joshuahorwitz.net">joshuahorwitz.net</a></li>
+<li><a href="http://www.dosh.cash/">DOSH</a></li>
+<li><a href="https://www.outcomes.com/">Outcomes.com</a></li>
+<li><a href="https://www.codefellows.org">Codefellows.org</a></li>
+<li><a href="http://ollieglass.com/">ollieglass.com</a></li>
+<li><a href="https://waigojs.com/">waigojs.com</a> (<a href="https://github.com/waigo/waigo.github.io">source</a>)</li>
+<li><a href="http://stateofjs.com/">The State Of JavaScript</a></li>
+<li><a href="http://zbt.mit.edu">ZBT MIT Website</a> (<a href="https://github.com/Slava/zbt-website">source</a>)</li>
+<li><a href="http://ethereumclassic.org/">ethereumclassic.org</a> (<a href="https://github.com/ethereumclassic/ethereumclassic.github.io/tree/source">source</a>)</li>
+<li><a href="http://husammachlovi.com">Husam Machlovi, Portfolio &amp; Blog</a></li>
+<li><a href="http://numenta.com">numenta.com</a> (<a href="https://github.com/numenta/numenta-web/tree/master/numenta.com">source</a>)</li>
+<li><a href="https://labs.chie.do">chiedolabs.com</a></li>
+<li><a href="https://yuppi.es">Yuppies</a> (<a href="https://github.com/f0rr0/f0rr0.github.io">source</a>)</li>
+<li><a href="http://blog.yongyuan.us">Go7hic</a></li>
+<li><a href="https://devops.spuul.com/">Video streaming devops blog</a> (<a href="https://github.com/Spuul/devops-blog/">source</a>)</li>
+<li><a href="https://blog.rphl.io">blog.rphl.io</a></li>
+<li><a href="http://oliverbenns.com?utm_source=github.com">oliverbenns.com</a> (<a href="https://github.com/oliverbenns/oliverbenns.com">source</a>)</li>
+<li><a href="https://www.kapadiya.net/?utm_source=github.com">Kapadiya.net</a> (<a href="https://github.com/vikas5914/vikas5914.github.io">source</a>)</li>
+<li><a href="https://anvilabs.co/?utm_source=github.com">anvilabs.co</a> (<a href="https://github.com/anvilabs/anvilabs.co">source</a>)</li>
+<li><a href="https://cardiogr.am">Cardiogram</a></li>
+<li><a href="https://geographer.su">Geographer</a> (<a href="https://github.com/MenaraSolutions/geographer-docs">source</a>)</li>
+<li><a href="https://fuchsundwald.de">fuchs+wald</a> (<a href="https://github.com/voellig-ohne/cf-website">source</a>)</li>
+<li><a href="https://angulartoreact.com">AngularToReact.com</a></li>
+<li><a href="http://www.damianmullins.com">damianmullins.com</a> (<a href="https://github.com/DamianMullins/damianmullins.github.io">source</a>)</li>
+<li><a href="https://www.spencerdixon.com/">Spencer Dixon’s Blog</a> (<a href="https://github.com/SpencerCDixon/blog">source</a>)</li>
+<li><a href="http://www.landlordaccountz.com">LandlordAccountz.com</a></li>
+<li><a href="https://timobecker.com">Timo Becker</a> (<a href="https://github.com/voellig-ohne/timobecker">source</a>)</li>
+<li><a href="http://sachagreif.com/">Sacha Greif</a> (<a href="https://github.com/SachaG/sg2017">source</a>)</li>
+<li><a href="https://crypto.christmas/">Crypto Christmas</a> (<a href="https://github.com/rileyjshaw/crypto.christmas">source</a>)</li>
+<li><a href="https://www.perspexilabs.com/">Perspexi Labs</a></li>
+<li><a href="https://github.com/gatsbyjs/gatsby/blob/master/README.md">Edit this file to add yours!</a></li>
+</ul>
+<p><em>Note, for the sites that have made their source available, you can
+install them locally by running <code>gatsby new SITE_NAME SOURCE_URL</code>.</em></p>
+<h2>Sponsors</h2>
+<ul>
+<li><a href="https://relaterocket.co">RelateRocket</a></li>
+<li><a href="http://thinkmill.com.au/">Thinkmill</a></li>
+<li><a href="https://loanpal.com/">Loanpal</a></li>
+</ul>
+<h2>Videos and blogs</h2>
+<ul>
+<li><a href="https://twitter.com/scottnonnenberg">Scott Nonnenberg</a> presents on Gatsby to the Seattle React.js Meetup <a href="https://blog.scottnonnenberg.com/static-site-generation-with-gatsby-js/">https://blog.scottnonnenberg.com/static-site-generation-with-gatsby-js/</a></li>
+<li><a href="https://twitter.com/kylemathews">Kyle Mathews</a> gave a lightning talk @ the 2016 React.js Conference on Gatsby <a href="https://www.youtube.com/watch?v=RFkNRKL6ZoE">https://www.youtube.com/watch?v=RFkNRKL6ZoE</a></li>
+<li><a href="https://twitter.com/kylemathews">Kyle Mathews</a> spoke on Gatsby to the San Francisco Static Web Tech meetup <a href="http://www.staticwebtech.com/presentations/developing-with-react-gatsbyjs/">http://www.staticwebtech.com/presentations/developing-with-react-gatsbyjs/</a></li>
+<li><a href="https://snipcart.com/blog/snipcart-reactjs-static-ecommerce-gatsby">ReactJS E-Commerce With No Backend Using Snipcart &amp; Gatsby</a></li>
+<li><a href="https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify">A step-by-step guide: Gatsby on Netlify</a></li>
+<li><a href="https://www.aerobatic.com/blog/gatsbyjs">Hosting GatsbyJS – A React Static Site Generator</a></li>
+<li><a href="https://medium.com/@michaelcereda/creating-an-isomorphic-universal-website-with-react-part-1-a905350acba8#.akoo25l6j">Michael Cereda’s multi-part series of blog posts on building his site with Gatsby</a></li>
+<li><a href="https://www.youtube.com/watch?v=f0O1nCgqA3E&amp;feature=youtu.be&amp;a">Talk on GatsbyJS @ ViennaJS</a></li>
+</ul>
+<h2>I’m already building a server-rendered React.js site, is Gatsby a good fit?</h2>
+<p>If your site falls closer to the site end of the app&lt;----&gt;site spectrum
+then yes.</p>
+<p>Gatsby is an excellent fit for blogs, marketing sites, docs sites, etc. Proper web
+apps should probably remain as normal web apps (though I’d love to be
+proved wrong!).</p>
+<h2>Warning!</h2>
+<p>Gatsby is not yet stable. APIs will break. Functionality is missing. It’s
+usable but if you plan on building with it, expect a rocky road for some time.</p>
+<p>Contributions welcome!</p>
+<h2>Getting started</h2>
+<h3>Install</h3>
+<p><code>npm install -g gatsby</code></p>
+<h3>Usage</h3>
+<ol>
+<li>Create new Gatsby site <code>gatsby new my-test-gatsby-site</code> This creates the
+directory for your Gatsby project and adds the minimal files
+needed.</li>
+<li><code>cd my-test-gatsby-site</code></li>
+<li><code>gatsby develop</code> — Gatsby will start a hot-reloading development
+server accessible at <a href="http://localhost:8000">localhost:8000</a></li>
+<li>See the tutorial below for more.</li>
+</ol>
+<h3>Gatsby Starters</h3>
+<p>The Gatsby CLI tool lets you install “starters”. These are
+partially built sites preconfigured to help you get moving faster on
+creating a certain type of site.</p>
+<p>When creating a new site, you can optionally specify a starter to
+base your new site on e.g. <code>gatsby new [SITE_DIRECTORY] [URL_OF_STARTER]</code></p>
+<p>For example, to quickly create a blog using Gatsby, you could install
+the Gatsby Starter Blog by running:</p>
+<p><code>gatsby new blog https://github.com/gatsbyjs/gatsby-starter-blog</code></p>
+<p>This downloads the files and initializes the site by running <code>npm install</code></p>
+<p>If you don’t specify a custom starter, your site will be created
+from the <a href="https://github.com/gatsbyjs/gatsby-starter-default">default
+starter</a>.</p>
+<p>There are several starters that have been created. Create a PR to
+include yours!</p>
+<ul>
+<li><a href="https://github.com/gatsbyjs/gatsby-starter-default">Kitchen sink default starter</a> (<a href="http://gatsbyjs.github.io/gatsby-starter-default/">Demo</a>)</li>
+<li><a href="https://github.com/gatsbyjs/gatsby-starter-blog">Simple blog</a> (<a href="http://gatsbyjs.github.io/gatsby-starter-blog/">Demo</a>)</li>
+<li><a href="https://github.com/gatsbyjs/gatsby-starter-documentation">Simple documentation site</a> (<a href="http://gatsbyjs.github.io/gatsby-starter-documentation/">Demo</a>)</li>
+<li><a href="https://github.com/wpioneer/gatsby-starter-lumen">Lumen</a> (<a href="http://wpioneer.github.io/gatsby-starter-lumen/">Demo</a>)</li>
+<li><a href="https://github.com/konsumer/gatsby-starter-drunkenblog">DrunkenBlog</a> (<a href="http://konsumer.js.org/gatsby-starter-drunkenblog/">Demo</a>)</li>
+<li><a href="https://github.com/brianstone/gatsby-starter-clean">Clean start</a> (<a href="http://gatsby-starter-clean.netlify.com/">Demo</a>)</li>
+<li><a href="https://github.com/chiedo/gatsby-amp-starter-blog">Project AMP blog</a></li>
+<li><a href="https://github.com/jaxx2104/gatsby-starter-bootstrap">Gatstrap</a> (<a href="https://jaxx2104.github.io/gatsby-starter-bootstrap/">Demo</a>)</li>
+</ul>
+<h3>Tutorial: Building a documentation site from the Gatsby Documentation Starter</h3>
+<ol>
+<li>Install gatsby <code>npm install -g gatsby</code></li>
+<li>Install documentation site starter <code>gatsby new docs-site gh:gatsbyjs/gatsby-starter-documentation</code></li>
+<li>type <code>cd docs-site</code></li>
+<li>type <code>gatsby develop</code></li>
+<li>Open site in browser at <a href="http://localhost:8000">localhost:8000</a>. Verify clicking on links works.</li>
+<li>Try editing the site’s config file <code>config.toml</code>.
+Change the <code>siteTitle</code> key. The site’s title should change shortly
+after saving.</li>
+<li>Next try editing a doc page. Open
+<code>/pages/docs/getting-started/index.md</code> and edit it. Again any saved
+changes should load without refreshing in the browser.</li>
+<li>Add a new markdown page to the documentation. Copy the <code>getting-started</code>
+directory to <code>some-additional-steps</code>. Then edit the markdown file
+within the new directory. If you’re familiar with other static site
+generation software, you’ll be familiar with the “frontmatter” at the
+top of the file. Edit the title there + change the order to “5”. Save
+this. Ideally this new file would be hot reloaded like other changes
+but I haven’t figured out how to make this happen yet (<a href="https://github.com/webpack/webpack/issues/1162">help
+appreciated here</a>).
+So to see your new page, restart <code>gatsby develop</code> and then refresh your
+browser.</li>
+<li>Build your site <code>gatsby build</code>. The site is built to the <code>/public</code>
+directory. Test that the build worked by running <code>gatsby serve-build</code>
+which serves the contents of the <code>/public</code> directory.</li>
+</ol>
+<h2>How Gatsby works</h2>
+<h3>How files become pages</h3>
+<p>The process is file --&gt; Webpack loader --&gt; React.js wrapper component
+–&gt; static HTML page.</p>
+<p>Gatsby leverages <a href="http://webpack.github.io/">Webpack</a> extensively.
+Webpack is a sophisticated module bundler that can turn any sort of
+file into a commonjs module. Webpack uses “Loaders” to convert a file
+into a module. These loaded modules are then wrapped inside a React.js
+component that’s specific to a given file type. Gatsby then generates a
+static HTML page from this component.</p>
+<p>Gatsby ships with default loaders and wrappers for HTML, Markdown, and
+JSX/CJSX but for most projects you’ll want to write your own loaders and
+wrappers (very easy to do).</p>
+<p>As an example of how this process works, let’s walk quickly through
+converting a markdown file into an HTML page.</p>
+<p>The <a href="https://github.com/gatsbyjs/gatsby/blob/master/lib/loaders/markdown-loader/index.js">default Gatsby markdown
+loader</a>
+parses the markdown into HTML and uses <a href="https://highlightjs.org/">Highlight.js</a>
+to syntax highlight code blocks.</p>
+<p>Our markdown file.</p>
+<pre><code class="language-markdown">---
+<span class="hljs-section">title: This is a title
+---</span>
+
+<span class="hljs-section"># Hi friends.</span>
+This is a markdown file.
+</code></pre>
+<p>When loaded and required, the resulting javascript object looks like the following:</p>
+<pre><code class="language-javascript">{
+  <span class="hljs-attr">file</span>: {
+    <span class="hljs-comment">// Information about file on disk e.g. extension, directory path, etc.</span>
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">title</span>: <span class="hljs-string">"This is a title"</span>,
+    <span class="hljs-attr">body</span>: <span class="hljs-string">"&lt;h1&gt;Hi friends.&lt;/h1&gt;&lt;p&gt;This is a markdown file&lt;/p&gt;"</span>
+  }
+}
+</code></pre>
+<p>Now Gatsby wraps the markdown file in this very simple React.js component.</p>
+<pre><code class="language-javascript"><span class="hljs-built_in">module</span>.exports = React.createClass({
+  <span class="hljs-attr">displayName</span>: <span class="hljs-string">"MarkdownWrapper"</span>,
+
+  <span class="hljs-attr">render</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> post = <span class="hljs-keyword">this</span>.props.route.page.data
+
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"markdown"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>{post.title}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">dangerouslySetInnerHTML</span>=<span class="hljs-string">{{__html:</span> <span class="hljs-attr">post.body</span>}}/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  }
+})
+</span></code></pre>
+<h4>frontmatter and metadata</h4>
+<p>Gatsby uses frontmatter and html-frontmatter to pull metadata out of files. This data is typically used in links leading to each page. The most relevant example is a list of blog posts in which you display the title, description, tags, etc. in the form of <code>{post.title}</code> in the React.js component.</p>
+<p>As seen in our previous markdown file, the title is part of the frontmatter</p>
+<pre><code><span class="hljs-meta">---</span>
+<span class="hljs-attr">title:</span> This is a title
+<span class="hljs-meta">---</span>
+
+<span class="hljs-comment"># Hi friends.</span>
+This is a markdown file.
+</code></pre>
+<p>An html example as follows.</p>
+<pre><code><span class="hljs-comment">&lt;!--
+title: This is a title
+--&gt;</span>
+ 
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>
+<p>In a .js|.jsx file, export a data object to set your metadata variables, like so:</p>
+<pre><code><span class="hljs-keyword">import</span> React from 'react'
+
+<span class="hljs-title">exports</span>.<span class="hljs-class"><span class="hljs-keyword">data</span> = {
+  <span class="hljs-title">title</span>: '<span class="hljs-type">This</span> <span class="hljs-title">is</span> <span class="hljs-title">a</span> <span class="hljs-title">title'</span>,
+}</span>
+
+<span class="hljs-title">export</span> <span class="hljs-keyword">default</span> <span class="hljs-type">MyComponent</span> ...
+</code></pre>
+<h3>Structure of a Gatsby site</h3>
+<ul>
+<li><code>config.toml</code> - Core application configuration is stored here. Available via a <code>require</code>
+or <code>import</code> of ‘config’. Values:
+<ul>
+<li><code>noProductionJavascript</code> - set to a truthy value to prevent generation of bundle.js
+(containing your client-side Single Page App) during a <code>gatbsy build</code>. You’ll need
+to update your top-level <code>html.js</code> file so that it doesn’t pull in <code>bundle.js</code> in
+production, but you’ll want to keep it for <code>gatsby develop</code> mode.</li>
+</ul>
+</li>
+<li><code>/pages</code> - All pages go here. Everything is turned into a page except
+files which start with an underscore:
+<ul>
+<li><code>_template</code> files under <code>/pages</code> are treated as parent templates for other pages in
+the same directory tree.</li>
+<li>(optional) <code>pages/404.js</code> or <code>pages/404.html</code> - automatically picked up as your ‘not
+found’ page. If you <code>&lt;Link&gt;</code> to an unknown URL, this page will be shown. Note: in
+production, you’ll need to <a href="https://github.com/gatsbyjs/gatsby/pull/121#issuecomment-194715068">set up your server host to show this page when it can’t find
+the requested file</a>.</li>
+</ul>
+</li>
+<li>(optional) <code>gatsby-browser.js</code> - a way to hook into key application events. Export
+<code>onRouteUpdate</code> of type <code>function()</code> to be notified whenever React-Router
+navigates.</li>
+<li>(optional) <code>gatsby-node.js</code> - a way to hook into events during build
+and development.</li>
+</ul>
+<h3>How to use your own webpack loaders</h3>
+<p>Gatsby uses <a href="https://github.com/lewie9021/webpack-configurator">webpack-configurator</a>
+to make changing the webpack loaders easy. The default set of loaders is organized by <a href="lib/utils/webpack.config.js#L125">key</a>.</p>
+<p>To modify the Webpack configuration, create a <code>gatsby-node.js</code> in the root of your project
+and export there a <code>modifyWebpackConfig</code> function.</p>
+<pre><code class="language-javascript">exports.modifyWebpackConfig = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">config, stage</span>) </span>{
+  <span class="hljs-comment">// edit loaders here</span>
+  <span class="hljs-keyword">return</span> config
+}
+</code></pre>
+<p>Gatsby calls this function with the webpack-configurator object and
+&quot;stage&quot; string when it creates a Webpack config. It first
+loads the defaults and then allows you to modify it.</p>
+<p>The <code>stage</code> can be:</p>
+<ol>
+<li>develop: for <code>gatsby develop</code> command, hot reload and CSS injection into page</li>
+<li>develop-html: same as develop without react-hmre in the babel config for html renderer</li>
+<li>build-css: build styles.css file</li>
+<li>build-html: build all HTML files</li>
+<li>build-javascript: Build bundle.js for Single Page App in production</li>
+</ol>
+<p>Consider the following example which removes the default css loader
+and replaces it with a loader that uses css-modules.</p>
+<pre><code class="language-javascript">exports.modifyWebpackConfig = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">config, stage</span>) </span>{
+  config.removeLoader(<span class="hljs-string">'css'</span>)
+  config.loader(<span class="hljs-string">'css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cfg</span>) </span>{
+    cfg.test = <span class="hljs-regexp">/\.css$/</span>
+    cfg.loader = <span class="hljs-string">'style!css?modules'</span>
+    <span class="hljs-keyword">return</span> cfg
+  })
+  <span class="hljs-keyword">return</span> config
+}
+</code></pre>
+<p>Each loader (<code>cfg</code> in the above example) can be a valid
+<a href="https://webpack.github.io/docs/configuration.html#module-loaders">webpack loader</a>
+and there are a host of
+<a href="https://webpack.github.io/docs/list-of-loaders.html">preexisting loaders</a>
+which you can use to enhance Gatsby.</p>
+<p>It is also possible to <a href="https://webpack.github.io/docs/how-to-write-a-loader.html">write your own loaders</a>.</p>
+<p>Gatsby includes <a href="https://github.com/gatsbyjs/gatsby/tree/master/lib/loaders">some default loaders</a> that you can also override.</p>
+<p>To write your own loader or override a Gatsby loader, make a <code>loaders</code> directory at the root of your site that contains directories for custom loaders.</p>
+<p>e.g. <code>loaders/markdown-loader/index.js</code> <a href="https://github.com/gatsbyjs/gatsby/blob/master/lib/utils/webpack.config.js#L325">will take precedence</a>
+over the markdown-loader that Gatsby includes.</p>
+<p><a href="https://github.com/gatsbyjs/gatsby-starter-default/blob/master/loaders/markdown-loader/index.js">See an example of a custom loader in the default starter</a>.</p>
+<h3>How to use your own webpack plugins</h3>
+<p>Similar to the loaders, plugins are handled via
+<a href="https://github.com/lewie9021/webpack-configurator">webpack-configurator</a>
+and <code>gatsby-node.js</code>.</p>
+<p><em>Note: the following example is now redundant since
+ExtractTextWebpackPlugin is now setup by default but you can still use
+it as an example of how to modify the Webpack plugins.</em></p>
+<p>If we wanted to extract all of the css in our project into a since
+<code>styles.css</code> file for production, we could add the
+<code>ExtractTextWebpackPlugin</code>. To do this, we need to modify the loader
+and add the plugin when generating the static HTML for our site.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> ExtractTextPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">"extract-text-webpack-plugin"</span>)
+
+exports.modifyWebpackConfig = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">config, stage</span>) </span>{
+  <span class="hljs-keyword">if</span>(stage === <span class="hljs-string">'build-html'</span>) {
+    config.removeLoader(<span class="hljs-string">'css'</span>)
+    config.loader(<span class="hljs-string">'css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cfg</span>) </span>{
+      cfg.test = <span class="hljs-regexp">/\.css$/</span>
+      cfg.loader = ExtractTextPlugin.extract(<span class="hljs-string">'css?minimize'</span>)
+      <span class="hljs-keyword">return</span> cfg
+    })
+    config.plugin(<span class="hljs-string">'extract-css'</span>,
+                  ExtractTextPlugin,
+                  [<span class="hljs-string">"styles.css"</span>, { <span class="hljs-attr">allChunks</span>: <span class="hljs-literal">true</span> }])
+  }
+  <span class="hljs-keyword">return</span> config
+}
+</code></pre>
+<p>Each plugin (<code>extract-css</code> in the above example) can be a valid
+<a href="https://webpack.github.io/docs/using-plugins.html">webpack plugin</a>
+and there are a host of
+<a href="https://webpack.github.io/docs/list-of-plugins.html">preexisting plugins</a>
+which you can use to enhance Gatsby.</p>
+<p>It is also possible to
+<a href="https://webpack.github.io/docs/how-to-write-a-plugin.html">write your own plugins</a>.</p>
+<h3>Perform additional post build step</h3>
+<p>Gatsby also uses <code>gatsby-node.js</code> to pass control of the final build step over
+to the user when running <code>gatsby build</code>. The post build function takes two arguments, the pages and the callback for completing the build:</p>
+<pre><code class="language-javascript">exports.postBuild = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">pages, callback</span>) </span>{
+  <span class="hljs-comment">// perform actions on pages here</span>
+
+  callback()
+}
+</code></pre>
+<h3>How to write your own wrappers</h3>
+<ul>
+<li>Coming…</li>
+</ul>
+<h2>FAQ</h2>
+<h3>Pre-Requisites</h3>
+<p><a href="https://www.python.org/">Python v2</a> is required to install Gatsby. Please ensure python is in your path before running <code>npm install -g gatsby</code>.</p>
+<h3>I added a new page and it’s not showing up!</h3>
+<p><a href="https://github.com/webpack/webpack/issues/1162">Webpack doesn’t currently support hot-reloading new files added to a context</a>. When you add a new file, restart the <code>gatsby develop</code> process and your new page will show up.</p>
+<p>Make sure you also including the <strong>trailing slash</strong> in your URLs:</p>
+<ul>
+<li>Bad: <code>http://localhost:8000/foo</code></li>
+<li>Good: <code>http://localhost:8000/foo/</code></li>
+</ul>
+<h3>Inline CSS</h3>
+<p>A neat performance feature supported by Gatsby is inlining your CSS in
+the <code>&lt;head&gt;</code> of each HTML page. Not referencing external style sheets
+significantly speeds up the initial render of your site by avoiding
+another round trip to your server as the initial render of a page is
+blocked by external CSS files. This is a best practice suggested by
+many groups including <a href="https://www.ampproject.org/docs/guides/responsive/style_pages.html">Google’s AMP
+project</a>.</p>
+<p>Each of <a href="https://github.com/gatsbyjs/gatsby-starter-default/blob/master/html.js">the official starters supports this pattern</a>.
+The code to make it happen is in brief:</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// In your html.js</span>
+<span class="hljs-keyword">let</span> css
+<span class="hljs-comment">// In development, css is injected by Javascript by the Webpack style-loader.</span>
+<span class="hljs-keyword">if</span> (process.env.NODE_ENV === <span class="hljs-string">'production'</span>) {
+  css = &lt;style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} /&gt;
+}
+
+// Then in your &lt;head&gt;
+{css}
+</code></pre>
+<h3>CSS modules</h3>
+<p><a href="https://github.com/css-modules/css-modules">CSS modules</a> are supported by default for all files with <code>.module.(css|less|scss|sass)</code> extension.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// Uses CSS Modules</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./my-component.module.css'</span>
+
+<span class="hljs-comment">// Doesn't use CSS Modules</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./main.css'</span>
+</code></pre>
+<h3>Configuring Babel</h3>
+<p>You can modify Babel’s behavior as normal by either providing a <code>.babelrc</code> in
+your site’s root directory or by adding a “babel” section in your site’s
+<code>package.json</code>. You can find out more about how to configure babel
+<a href="https://babeljs.io/docs/usage/babelrc/">here</a>.</p>
+<p>Gatsby by default will use your Babel configuration over the default if it can
+find it. Gatsby will automatically add react-hmre to your Babel config during
+development.</p>
+<p>Note that if you want to use babel-plugin that is not provided by Gatsby, you
+will have to also add it to your package.json. You can use any babel-plugin
+that Gatsby packs as a dependency without having to add it to your own
+package.json:</p>
+<ul>
+<li>babel-plugin-add-module-exports</li>
+<li>babel-plugin-transform-object-assign</li>
+<li>babel-preset-es2015</li>
+<li>babel-preset-react</li>
+<li>babel-preset-stage-0</li>
+</ul>
+<p>If you need to change the loader to be something completely custom. You will
+have to define your own webpack loader by following the steps <a href="https://github.com/gatsbyjs/gatsby#how-to-use-your-own-webpack-loaders">described
+above</a>.</p>
+<h3>Extending Markdown Syntax with Plugins</h3>
+<p>Gatsby uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> to parse
+markdown files into HTML. By default Gatsy ships with only basic markdown
+support. You can extend the syntax (e.g. for mathematical equations) by installing
+<a href="https://www.npmjs.org/browse/keyword/markdown-it-plugin">markdown-it plugins</a>.</p>
+<p>If you want to do this you will need to use a custom markdown loader. You can
+copy the one provided in the default starter <a href="https://github.com/gatsbyjs/gatsby-starter-default/blob/master/loaders/markdown-loader/index.js">here</a>.
+Add the relevant packages to your dependencies, including the markdown-it
+plugins that you want to use and enable them with <code>md.use(require('markdown-it-plugin-name'))</code>
+within the markdown loader file.</p>
+<h3>Deploying to Github Pages (and other hosts where your site’s links need prefixes)</h3>
+<p>Gatsby supports automatically prefixing links with its <code>prefixLink</code> helper function.</p>
+<p>First set the prefix in your config file e.g. <code>linkPrefix = '/your-project'</code></p>
+<p>Then simply import the function and run all links in your site
+thorough it e.g.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { prefixLink } <span class="hljs-keyword">from</span> <span class="hljs-string">'gatsby-helpers'</span>
+
+prefixLink(<span class="hljs-string">'/'</span>)
+<span class="hljs-comment">// During development this will return "/"</span>
+<span class="hljs-comment">// When deployed to example.github.io/your-project/ this will return "/your-project/"</span>
+</code></pre>
+<p>Then finally, when building your site, run <code>gatsby build --prefix-links</code></p>
+<p>The built site is now in <code>/public</code>. These files need copied to your
+<code>gh-pages</code> branch and committed and pushed. You can do this manually or
+use the handy <a href="https://www.npmjs.com/package/gh-pages"><code>gh-pages</code></a> CLI tool.</p>
+<p>Both the sample sites are deployed to github pages and use link
+prefixing. Read their source for more help:
+<a href="https://github.com/gatsbyjs/gatsby-starter-documentation">documentation</a>/<a href="https://github.com/gatsbyjs/gatsby-starter-blog">blog</a>.</p>
+<h3>I have an existing site in (Wordpress|Drupal|Blogger|Tumblr|*), how do I convert it to Gatsby?</h3>
+<p>Jekyll has a <a href="http://import.jekyllrb.com/">comprehensive import tool</a> for these and many other website tools.
+Once your pages are converted to markdown, change the file extensions to
+<code>.md</code> from the <code>.markdown</code> the tool outputs and then use them in your
+site.</p>
+</div></div></div></div><span style="display:block;clear:both;" data-reactid="55"> </span></div></div></div><script src="/bundle.js?t=1483884759035"></script></body></html>
